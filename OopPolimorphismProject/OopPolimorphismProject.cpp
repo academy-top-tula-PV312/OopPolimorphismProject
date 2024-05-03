@@ -91,7 +91,17 @@ int main()
         else
             zoo.push_back(new Tigr());
 
-    for (int i{}; i < zoo.size(); i++)
+    /*for (int i{}; i < zoo.size(); i++)
         std::cout << zoo[i]->Name() << ": " 
                   << zoo[i]->Voice() << "\n";
+    std::cout << "\n";*/
+
+    for (Animal* animal : zoo)
+        animal->Name() = "*******";
+
+    for (Animal* animal : zoo)
+        std::cout << animal->Name() << ": "
+                  << animal->Voice() << "\n";
+
+
 }
